@@ -1,0 +1,57 @@
+{
+  "$comment": "CESIDR canonical statuses: draft canonical IDs for the categories into which the Code of Canons of the Eastern Churches sorts the Churches sui iuris. Referenced from data/churches.json as the value of each Church's `canonical_status` field. The CCEO defines four (can. 55-150, 151-154, 155-173, 174-176); the fifth entry here, cstat:latin, is not a CCEO category at all and exists because the Latin Church is governed by the 1983 Code of Canon Law instead — it is flagged with `cceo_category: false`. Status is an attribute and not identity: a Church raised from metropolitan sui iuris to major archiepiscopal keeps its `esi:` ID (schema proposal, rule 2). All IDs are drafts pending committee review; the `cstat:` prefix is a placeholder.",
+  "id_scheme": "cstat:<slug>",
+  "entry_count": 5,
+  "entries": [
+    {
+      "id": "cstat:patriarchal",
+      "name_en": "patriarchal Church",
+      "name_la": "Ecclesia patriarchalis",
+      "cceo_canons": "can. 55-150",
+      "cceo_category": true,
+      "head_title": "patriarch",
+      "governing_body": "synod of bishops of the patriarchal Church",
+      "note": "The fullest developed form of an Eastern Catholic Church. The patriarch together with the synod holds legislative, judicial and administrative power within the territory of the Church, saving those matters reserved to the Roman Pontiff."
+    },
+    {
+      "id": "cstat:major-archiepiscopal",
+      "name_en": "major archiepiscopal Church",
+      "name_la": "Ecclesia archiepiscopalis maior",
+      "cceo_canons": "can. 151-154",
+      "cceo_category": true,
+      "head_title": "major archbishop",
+      "governing_body": "synod of bishops of the major archiepiscopal Church",
+      "note": "Governed by a major archbishop with his synod. Can. 152 assimilates it to a patriarchal Church in law, the principal difference being that the election of the major archbishop requires confirmation by the Roman Pontiff."
+    },
+    {
+      "id": "cstat:metropolitan",
+      "name_en": "metropolitan Church sui iuris",
+      "name_la": "Ecclesia metropolitana sui iuris",
+      "cceo_canons": "can. 155-173",
+      "cceo_category": true,
+      "head_title": "metropolitan",
+      "governing_body": "council of hierarchs",
+      "note": "Presided over by the metropolitan of a determined see, appointed by the Roman Pontiff and assisted by a council of hierarchs rather than by a synod (can. 155 §1)."
+    },
+    {
+      "id": "cstat:other",
+      "name_en": "other Church sui iuris",
+      "name_la": "ceterae Ecclesiae sui iuris",
+      "cceo_canons": "can. 174-176",
+      "cceo_category": true,
+      "head_title": "hierarch",
+      "governing_body": null,
+      "note": "The residual category, which the CCEO does not give a positive name — it is literally 'the other Churches sui iuris'. Each is entrusted to a hierarch designated by the Holy See. The eight Churches in this category vary widely: some have an eparchy, some an apostolic exarchate or administration, and some no hierarchy of their own at all."
+    },
+    {
+      "id": "cstat:latin",
+      "name_en": "Latin Church",
+      "name_la": "Ecclesia Latina",
+      "cceo_canons": null,
+      "cceo_category": false,
+      "head_title": "Roman Pontiff",
+      "governing_body": null,
+      "note": "Not a CCEO category. The Latin Church is governed by the 1983 Code of Canon Law and headed by the Roman Pontiff directly, so none of the four Eastern categories applies to it. Whether it should instead be classed as patriarchal — the title Patriarch of the West having been restored to the Annuario Pontificio in 2024 after being dropped in 2006 — is open question 4 in docs/schema-proposal.md."
+    }
+  ]
+}

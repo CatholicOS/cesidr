@@ -42,19 +42,29 @@ esi:<slug>
 {
   "id": "esi:melkite",
   "name_en": "Melkite Greek Catholic Church",
-  "tradition": "byzantine",
-  "canonical_status": "patriarchal",
+  "tradition": "trad:byzantine",
+  "canonical_status": "cstat:patriarchal",
   "head_title": "patriarch",
   "see": "Damascus",
   "country": "SY"
 }
 ```
 
-`tradition` is one of `latin`, `byzantine`, `alexandrian`, `antiochene`,
-`east-syriac`, `armenian`. `canonical_status` is one of the four CCEO categories —
-`patriarchal` (can. 55-150), `major-archiepiscopal` (can. 151-154), `metropolitan`
-(can. 155-173), `other` (can. 174-176) — or `latin` for the Latin Church, which is
-governed by the 1983 Code and takes none of them.
+Neither `tradition` nor `canonical_status` is a free string: both are
+cross-references into companion registries in this repository, following the same
+convention CECDR uses for `"type": "ctype:diocese"` and the family uses for `rp:`
+and `mr:` references.
+
+- **`data/tradition.json`** (`trad:<slug>`) — the six liturgical traditions, each
+  with its Latin name and, for the five of CCEO can. 28 §2, that citation. The Latin
+  tradition is flagged `"in_cceo_can_28": false`, the CCEO governing the Eastern
+  Churches only.
+- **`data/canonical_status.json`** (`cstat:<slug>`) — the four CCEO categories, each
+  with its Latin name, governing canons, the title of its head and its governing
+  body, plus `cstat:latin` flagged `"cceo_category": false`.
+
+`scripts/generate_registry.py` asserts that every `tradition` and every
+`canonical_status` resolves, so an unresolvable cross-reference fails the build.
 
 Planned beyond the seed: `name_la` (the Annuario's Latin nomenclature), `erected`
 (date, with the act that erected it), `members` (with the Annuario year it is drawn

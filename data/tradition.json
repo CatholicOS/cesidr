@@ -1,0 +1,61 @@
+{
+  "$comment": "CESIDR liturgical traditions: draft canonical IDs for the liturgical traditions from which the rites of the Churches sui iuris arise. Referenced from data/churches.json as the value of each Church's `tradition` field. CCEO can. 28 §2 names five: 'The rites treated in this code, unless otherwise stated, are those which arise from the Alexandrian, Antiochene, Armenian, Chaldean and Constantinopolitan traditions.' The Latin tradition is not among them — the CCEO governs the Eastern Churches only — and is minted here so that the Latin Church can carry a `tradition` like every other entry. Note the distinction of CCEO can. 27 and 28: a Church sui iuris is a community joined by a hierarchy, a rite is a patrimony; several Churches share one tradition. All IDs are drafts pending committee review; the `trad:` prefix is a placeholder.",
+  "id_scheme": "trad:<slug>",
+  "entry_count": 6,
+  "entries": [
+    {
+      "id": "trad:latin",
+      "name_en": "Latin (Western) tradition",
+      "name_la": "traditio Latina",
+      "cceo_reference": null,
+      "origin": "Rome",
+      "in_cceo_can_28": false,
+      "note": "Not among the five traditions of CCEO can. 28 §2, which treats the Eastern Churches only. Minted so that the Latin Church carries a tradition like every other entry. Also styled the Western or Roman tradition."
+    },
+    {
+      "id": "trad:byzantine",
+      "name_en": "Byzantine tradition",
+      "name_la": "traditio Constantinopolitana",
+      "cceo_reference": "CCEO can. 28 §2",
+      "origin": "Constantinople",
+      "in_cceo_can_28": true,
+      "note": "The CCEO's own name for it is Constantinopolitan; Byzantine is the usual English style. By far the most widely shared tradition — fourteen of the twenty-four Churches sui iuris arise from it."
+    },
+    {
+      "id": "trad:alexandrian",
+      "name_en": "Alexandrian tradition",
+      "name_la": "traditio Alexandrina",
+      "cceo_reference": "CCEO can. 28 §2",
+      "origin": "Alexandria",
+      "in_cceo_can_28": true,
+      "note": "Comprises the Coptic and the Ge'ez (Ethiopic) liturgical families."
+    },
+    {
+      "id": "trad:antiochene",
+      "name_en": "Antiochene (West Syriac) tradition",
+      "name_la": "traditio Antiochena",
+      "cceo_reference": "CCEO can. 28 §2",
+      "origin": "Antioch",
+      "in_cceo_can_28": true,
+      "note": "Also styled West Syriac. The Maronite Church has its own distinct usage within it."
+    },
+    {
+      "id": "trad:east-syriac",
+      "name_en": "Chaldean (East Syriac) tradition",
+      "name_la": "traditio Chaldaea",
+      "cceo_reference": "CCEO can. 28 §2",
+      "origin": "Edessa and Seleucia-Ctesiphon",
+      "in_cceo_can_28": true,
+      "note": "The CCEO's own name for it is Chaldean; East Syriac is the usual descriptive style. The slug follows the descriptive form to avoid collision with the Chaldean Catholic Church (esi:chaldean), which is one of the two Churches arising from it — see open question 3 in docs/schema-proposal.md."
+    },
+    {
+      "id": "trad:armenian",
+      "name_en": "Armenian tradition",
+      "name_la": "traditio Armena",
+      "cceo_reference": "CCEO can. 28 §2",
+      "origin": "Armenia",
+      "in_cceo_can_28": true,
+      "note": "The only tradition represented by a single Church sui iuris."
+    }
+  ]
+}

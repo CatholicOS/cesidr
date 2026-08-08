@@ -27,6 +27,8 @@ Examples: `esi:latin`, `esi:ukrainian`, `esi:maronite`, `esi:syro-malabar`, `esi
 ## Repository contents
 
 - [`data/churches.json`](data/churches.json) — the seed registry: 24 Churches *sui iuris*, each with its draft canonical ID, English name, liturgical tradition, canonical status under the CCEO, the title of the one who governs it, and its see.
+- [`data/tradition.json`](data/tradition.json) — the liturgical traditions (`trad:byzantine`, `trad:alexandrian`, …), each with its Latin name and its CCEO can. 28 §2 citation. Each Church's `tradition` field is a cross-reference into this file.
+- [`data/canonical_status.json`](data/canonical_status.json) — the CCEO categories (`cstat:patriarchal`, `cstat:major-archiepiscopal`, …), each with its Latin name, governing canons, the title of its head and its governing body. Each Church's `canonical_status` field is a cross-reference into this file.
 - [`registry/churches.md`](registry/churches.md) — the human-readable table, grouped by liturgical tradition. Generated, never hand-edited.
 - [`docs/schema-proposal.md`](docs/schema-proposal.md) — the proposed schema and the open questions for the committee.
 - [`scripts/generate_registry.py`](scripts/generate_registry.py) — regenerates the registry table from the seed.
