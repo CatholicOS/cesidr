@@ -1,0 +1,254 @@
+{
+  "$comment": "CESIDR seed registry: draft canonical IDs for the 24 Churches sui iuris of the Catholic Church — the Latin Church and the 23 Eastern Catholic Churches. All IDs are drafts pending committee review; the `esi:` prefix is a placeholder pending namespace coordination across the CDCF registries. Slugs are deliberately identical to the values CECDR's `church_sui_iuris` field already uses (latin, ukrainian, maronite, syro-malabar), so that field can become a cross-reference into this registry. VERIFICATION STATUS: `canonical_status` follows the four categories of the Code of Canons of the Eastern Churches (patriarchal, CCEO can. 55-150; major archiepiscopal, can. 151-154; metropolitan sui iuris, can. 155-173; other sui iuris, can. 174-176) and was checked against Catholic-Hierarchy's rite index and canonical-status surveys. `see`, `country` and `erected` are enrichment and are the least verified fields here. The Annuario Pontificio is the authority for all of it and has NOT been consulted — it is not available online. Treat every field as draft.",
+  "id_scheme": "esi:<slug>",
+  "entry_count": 24,
+  "counts_by_canonical_status": {
+    "patriarchal": 6,
+    "major-archiepiscopal": 4,
+    "metropolitan": 5,
+    "other": 8,
+    "latin": 1
+  },
+  "entries": [
+    {
+      "id": "esi:latin",
+      "name_en": "Latin Church",
+      "tradition": "latin",
+      "canonical_status": "latin",
+      "head_title": "Roman Pontiff",
+      "see": "Rome",
+      "country": "VA",
+      "note": "The Western Church, comprising the great majority of the faithful. Governed by the 1983 Code of Canon Law rather than the CCEO, and headed by the Roman Pontiff directly; `canonical_status` is therefore its own value rather than one of the four CCEO categories. The title Patriarch of the West, dropped from the Annuario Pontificio in 2006, was restored in 2024."
+    },
+    {
+      "id": "esi:albanian",
+      "name_en": "Albanian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "other",
+      "head_title": "apostolic administrator",
+      "see": "Vlorë",
+      "country": "AL",
+      "note": "Governed by the Apostolic Administration of Southern Albania."
+    },
+    {
+      "id": "esi:belarusian",
+      "name_en": "Belarusian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "other",
+      "head_title": "apostolic visitator",
+      "see": null,
+      "country": "BY",
+      "note": "Descends from the Union of Brest (1596). Has no eparchial hierarchy of its own; the faithful are served under an apostolic visitator."
+    },
+    {
+      "id": "esi:bulgarian",
+      "name_en": "Bulgarian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "other",
+      "head_title": "eparchial bishop",
+      "see": "Sofia",
+      "country": "BG",
+      "note": "Comprises the Eparchy of Saint John XXIII of Sofia, raised from an apostolic exarchate erected in 1926. Its two nineteenth-century apostolic vicariates, Macedonia and Thrace, were suppressed into that exarchate."
+    },
+    {
+      "id": "esi:croatian-serbian",
+      "name_en": "Greek Catholic Church of Croatia and Serbia",
+      "tradition": "byzantine",
+      "canonical_status": "other",
+      "head_title": "eparchial bishop",
+      "see": "Križevci",
+      "country": "HR",
+      "note": "Comprises the Eparchy of Križevci (erected 1777, covering Croatia, Slovenia and Bosnia and Herzegovina) and the Eparchy of Saint Nicholas of Ruski Krstur (Serbia, raised from an apostolic exarchate on 6 December 2018). Naming is unsettled: also styled the Croatian Greek Catholic Church, and indexed by Catholic-Hierarchy simply as Križevci."
+    },
+    {
+      "id": "esi:greek",
+      "name_en": "Greek Byzantine Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "other",
+      "head_title": "apostolic exarch",
+      "see": "Athens",
+      "country": "GR",
+      "note": "Comprises the Apostolic Exarchate of Greece and the Apostolic Exarchate of Istanbul; a very small body."
+    },
+    {
+      "id": "esi:hungarian",
+      "name_en": "Hungarian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "metropolitan",
+      "head_title": "metropolitan",
+      "see": "Debrecen",
+      "country": "HU",
+      "note": "Raised to a metropolitan Church sui iuris in 2015, the Metropolia of Hajdúdorog."
+    },
+    {
+      "id": "esi:italo-albanian",
+      "name_en": "Italo-Albanian Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "other",
+      "head_title": "eparchial bishop",
+      "see": null,
+      "country": "IT",
+      "note": "Never formally out of communion with Rome. Has three circumscriptions and no single head: the Eparchies of Lungro and of Piana degli Albanesi, and the Territorial Abbacy of Santa Maria di Grottaferrata — the only non-Latin territorial abbacy in the Church."
+    },
+    {
+      "id": "esi:macedonian",
+      "name_en": "Macedonian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "other",
+      "head_title": "eparchial bishop",
+      "see": "Strumica",
+      "country": "MK",
+      "note": "Comprises the Eparchy of the Assumption of the Blessed Virgin Mary in Strumica-Skopje, raised from an apostolic exarchate."
+    },
+    {
+      "id": "esi:melkite",
+      "name_en": "Melkite Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "patriarchal",
+      "head_title": "patriarch",
+      "see": "Damascus",
+      "country": "SY",
+      "note": "Patriarchate of Antioch and all the East, of Alexandria and of Jerusalem. The largest Byzantine-tradition Catholic body in the Middle East."
+    },
+    {
+      "id": "esi:romanian",
+      "name_en": "Romanian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "major-archiepiscopal",
+      "head_title": "major archbishop",
+      "see": "Blaj",
+      "country": "RO",
+      "note": "Major Archiepiscopal Church of Făgăraș and Alba Iulia. Suppressed under the communist regime in 1948 and restored in 1990."
+    },
+    {
+      "id": "esi:russian",
+      "name_en": "Russian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "other",
+      "head_title": "apostolic exarch",
+      "see": null,
+      "country": "RU",
+      "note": "Its Apostolic Exarchates of Russia (1917) and Harbin (1928) have had no functioning hierarchy since the Soviet period; communities are dispersed."
+    },
+    {
+      "id": "esi:ruthenian",
+      "name_en": "Ruthenian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "metropolitan",
+      "head_title": "metropolitan",
+      "see": "Pittsburgh",
+      "country": "US",
+      "note": "Also styled the Byzantine Catholic Church in America. Canonically unusual: the metropolitan see is the Metropolia of Pittsburgh, but the Church also includes the Eparchy of Mukachevo (Ukraine) and the Apostolic Exarchate of the Czech Republic, both immediately subject to the Holy See rather than to Pittsburgh."
+    },
+    {
+      "id": "esi:slovak",
+      "name_en": "Slovak Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "metropolitan",
+      "head_title": "metropolitan",
+      "see": "Prešov",
+      "country": "SK",
+      "note": "Raised to a metropolitan Church sui iuris in 2008."
+    },
+    {
+      "id": "esi:ukrainian",
+      "name_en": "Ukrainian Greek Catholic Church",
+      "tradition": "byzantine",
+      "canonical_status": "major-archiepiscopal",
+      "head_title": "major archbishop",
+      "see": "Kyiv",
+      "country": "UA",
+      "note": "The largest of the Eastern Catholic Churches. Major Archiepiscopal Church of Kyiv-Halyč; the see was transferred from Lviv to Kyiv in 2005."
+    },
+    {
+      "id": "esi:coptic",
+      "name_en": "Coptic Catholic Church",
+      "tradition": "alexandrian",
+      "canonical_status": "patriarchal",
+      "head_title": "patriarch",
+      "see": "Cairo",
+      "country": "EG",
+      "note": "Patriarchate of Alexandria of the Copts, erected 1824 and restored 1895."
+    },
+    {
+      "id": "esi:eritrean",
+      "name_en": "Eritrean Catholic Church",
+      "tradition": "alexandrian",
+      "canonical_status": "metropolitan",
+      "head_title": "metropolitan",
+      "see": "Asmara",
+      "country": "ER",
+      "note": "Erected as a metropolitan Church sui iuris on 19 January 2015, separating from the Ethiopian Catholic Church. The most recently erected Church sui iuris."
+    },
+    {
+      "id": "esi:ethiopian",
+      "name_en": "Ethiopian Catholic Church",
+      "tradition": "alexandrian",
+      "canonical_status": "metropolitan",
+      "head_title": "metropolitan",
+      "see": "Addis Ababa",
+      "country": "ET",
+      "note": "Uses the Ge'ez liturgical tradition."
+    },
+    {
+      "id": "esi:maronite",
+      "name_en": "Maronite Church",
+      "tradition": "antiochene",
+      "canonical_status": "patriarchal",
+      "head_title": "patriarch",
+      "see": "Bkerké",
+      "country": "LB",
+      "note": "Patriarchate of Antioch of the Maronites. The only Eastern Catholic Church with no counterpart outside communion with Rome."
+    },
+    {
+      "id": "esi:syriac",
+      "name_en": "Syriac Catholic Church",
+      "tradition": "antiochene",
+      "canonical_status": "patriarchal",
+      "head_title": "patriarch",
+      "see": "Beirut",
+      "country": "LB",
+      "note": "Patriarchate of Antioch of the Syriacs. The patriarchal see is Antioch; the patriarch resides in Beirut."
+    },
+    {
+      "id": "esi:syro-malankara",
+      "name_en": "Syro-Malankara Catholic Church",
+      "tradition": "antiochene",
+      "canonical_status": "major-archiepiscopal",
+      "head_title": "major archbishop",
+      "see": "Trivandrum",
+      "country": "IN",
+      "note": "Entered full communion in 1930 through the Reunion Movement led by Mar Ivanios. Raised to a major archiepiscopal Church in 2005."
+    },
+    {
+      "id": "esi:chaldean",
+      "name_en": "Chaldean Catholic Church",
+      "tradition": "east-syriac",
+      "canonical_status": "patriarchal",
+      "head_title": "patriarch",
+      "see": "Baghdad",
+      "country": "IQ",
+      "note": "Patriarchate of Babylon of the Chaldeans."
+    },
+    {
+      "id": "esi:syro-malabar",
+      "name_en": "Syro-Malabar Catholic Church",
+      "tradition": "east-syriac",
+      "canonical_status": "major-archiepiscopal",
+      "head_title": "major archbishop",
+      "see": "Ernakulam-Angamaly",
+      "country": "IN",
+      "note": "Traces its origin to the mission of the Apostle Thomas. Raised to a major archiepiscopal Church in 1992; the largest Eastern Catholic Church by membership."
+    },
+    {
+      "id": "esi:armenian",
+      "name_en": "Armenian Catholic Church",
+      "tradition": "armenian",
+      "canonical_status": "patriarchal",
+      "head_title": "patriarch",
+      "see": "Beirut",
+      "country": "LB",
+      "note": "Patriarchate of Cilicia of the Armenians. The Armenian is the only liturgical tradition represented by a single Church sui iuris."
+    }
+  ]
+}
