@@ -51,3 +51,7 @@ The Latin Church is governed by the 1983 Code of Canon Law rather than the CCEO 
 **The Annuario Pontificio is the authority for the content of this registry, and it has not been consulted** — it is not published online. The seed was assembled from the Code of Canons of the Eastern Churches for the canonical categories, and from [Catholic-Hierarchy](https://www.catholic-hierarchy.org/rite/) and [GCatholic](https://gcatholic.org/) as verification aids. Their compiled data is not incorporated wholesale.
 
 Every field is therefore draft. The `see`, `country` and `erected` values are the least verified, and the naming of the Greek Catholic Church of Croatia and Serbia is itself unsettled between sources. Corrections against the Annuario are the most useful contribution this repository can receive.
+
+## License
+
+The data and documentation in this repository are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/) (CC BY-NC-ND 4.0). See [`LICENSE`](LICENSE) for the full legal code.
