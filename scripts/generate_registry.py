@@ -34,7 +34,8 @@ into [`data/canonical_status.json`](../data/canonical_status.json) — patriarch
 the 1983 Code instead and takes none of them. The tradition headings are likewise
 `trad:` cross-references into [`data/tradition.json`](../data/tradition.json).
 **Head** is
-the title of the one who governs the Church; **See** is the seat of that governance,
+the title of the one who governs the Church, blank for the Russian Church, which has no
+functioning hierarchy; **See** is the seat of that governance,
 blank for the Churches that have no single head. `Country` is the ISO 3166-1 alpha-2
 code of the see. Circumscriptions of these Churches are identified in the
 [CECDR](../../cecdr) with `circ:` IDs, whose `church_sui_iuris` field is a
@@ -86,7 +87,7 @@ def main():
             label = s["name_en"] if s["cceo_category"] else "—"
             out.append(
                 f"| `{e['id']}` | {e['name_en']} | {label} "
-                f"| {e['head_title']} | {e['see'] or ''} | {e['country'] or ''} "
+                f"| {e['head_title'] or ''} | {e['see'] or ''} | {e['country'] or ''} "
                 f"| {e.get('note', '')} |"
             )
 

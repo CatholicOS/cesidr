@@ -1,5 +1,5 @@
 {
-  "$comment": "CESIDR seed registry: draft canonical IDs for the 24 Churches sui iuris of the Catholic Church — the Latin Church and the 23 Eastern Catholic Churches. All IDs are drafts pending committee review; the `esi:` prefix is a placeholder pending namespace coordination across the CDCF registries. Slugs are deliberately identical to the values CECDR's `church_sui_iuris` field already uses (latin, ukrainian, maronite, syro-malabar), so that field can become a cross-reference into this registry. VERIFICATION STATUS: `tradition` and `canonical_status` are cross-references into data/tradition.json and data/canonical_status.json respectively. The canonical categories follow the Code of Canons of the Eastern Churches and were checked against Catholic-Hierarchy's rite index and canonical-status surveys. `see`, `country` and `erected` are enrichment and are the least verified fields here. The Annuario Pontificio is the authority for all of it and has NOT been consulted — it is not available online. Treat every field as draft.",
+  "$comment": "CESIDR seed registry: draft canonical IDs for the 24 Churches sui iuris of the Catholic Church — the Latin Church and the 23 Eastern Catholic Churches. All IDs are drafts pending committee review; the `esi:` prefix is a placeholder pending namespace coordination across the CDCF registries. Slugs are deliberately identical to the values CECDR's `church_sui_iuris` field already uses (latin, ukrainian, maronite, syro-malabar), so that field can become a cross-reference into this registry. VERIFICATION STATUS: `tradition` and `canonical_status` are cross-references into data/tradition.json and data/canonical_status.json respectively. The canonical categories follow the Code of Canons of the Eastern Churches and were checked against Catholic-Hierarchy's rite index and canonical-status surveys. `see`, `country` and `erected` are enrichment and are the least verified fields here. The seed has been cross-checked against the Dizionario Enciclopedico dell'Oriente Cristiano (ed. E. G. Farrugia, Pontificio Istituto Orientale, Rome 2000), which reflects the state of the Churches in 2000 and so cannot confirm later changes. The Annuario Pontificio is the authority for all of it and has NOT been consulted — it is not available online. Treat every field as draft.",
   "id_scheme": "esi:<slug>",
   "entry_count": 24,
   "counts_by_canonical_status": {
@@ -48,7 +48,7 @@
       "head_title": "eparchial bishop",
       "see": "Sofia",
       "country": "BG",
-      "note": "Comprises the Eparchy of Saint John XXIII of Sofia, raised from an apostolic exarchate erected in 1926. Its two nineteenth-century apostolic vicariates, Macedonia and Thrace, were suppressed into that exarchate."
+      "note": "Originates in the appointment in 1861 of Joseph Sokolsky as archbishop of the Bulgarian Catholics of the Byzantine rite. Comprises the Eparchy of Saint John XXIII of Sofia, raised from an apostolic exarchate erected in 1926. That exarchate replaced three earlier jurisdictions, all suppressed into it: the apostolic vicariates of Thessalonica (Macedonia) and Adrianople (Thrace), both erected in 1883, and the apostolic administration at Constantinople."
     },
     {
       "id": "esi:croatian-serbian",
@@ -88,7 +88,7 @@
       "head_title": "eparchial bishop",
       "see": null,
       "country": "IT",
-      "note": "Never formally out of communion with Rome. Has three circumscriptions and no single head: the Eparchies of Lungro and of Piana degli Albanesi, and the Territorial Abbacy of Santa Maria di Grottaferrata — the only non-Latin territorial abbacy in the Church."
+      "note": "Never formally out of communion with Rome. Has three circumscriptions and no single head: the Eparchies of Lungro and of Piana degli Albanesi, and the Exarchic Monastery of Santa Maria di Grottaferrata, exarchic since 1937 and immediately subject to the Congregation for the Oriental Churches."
     },
     {
       "id": "esi:macedonian",
@@ -125,10 +125,10 @@
       "name_en": "Russian Greek Catholic Church",
       "tradition": "trad:byzantine",
       "canonical_status": "cstat:other",
-      "head_title": "apostolic exarch",
+      "head_title": null,
       "see": null,
       "country": "RU",
-      "note": "Its Apostolic Exarchates of Russia (1917) and Harbin (1928) have had no functioning hierarchy since the Soviet period; communities are dispersed."
+      "note": "Has no functioning hierarchy and so no head: its Apostolic Exarchates of Russia (1917) and Harbin (1928) have had no exarch since the Soviet period, and communities are dispersed."
     },
     {
       "id": "esi:ruthenian",
@@ -158,7 +158,7 @@
       "head_title": "major archbishop",
       "see": "Kyiv",
       "country": "UA",
-      "note": "The largest of the Eastern Catholic Churches. Major Archiepiscopal Church of Kyiv-Halyč; the see was transferred from Lviv to Kyiv in 2005."
+      "note": "Major Archiepiscopal Church of Kyiv-Halyč; the see was transferred from Lviv to Kyiv in 2005. In 2000 the largest of the Eastern Catholic Churches, with a little over 5,000,000 faithful against about 3,300,000 Syro-Malabar (Dizionario Enciclopedico dell'Oriente Cristiano, Rome 2000, pp. 122, 701, 786); the present ranking awaits a dated Annuario figure — see open question 5 in docs/schema-proposal.md."
     },
     {
       "id": "esi:coptic",
@@ -238,7 +238,7 @@
       "head_title": "major archbishop",
       "see": "Ernakulam-Angamaly",
       "country": "IN",
-      "note": "Traces its origin to the mission of the Apostle Thomas. Raised to a major archiepiscopal Church in 1992; the largest Eastern Catholic Church by membership."
+      "note": "Traces its origin to the mission of the Apostle Thomas. Raised to a major archiepiscopal Church in 1992."
     },
     {
       "id": "esi:armenian",

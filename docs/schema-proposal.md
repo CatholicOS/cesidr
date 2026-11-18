@@ -82,8 +82,14 @@ from), `circumscription_count`, and `historical_names`.
   Maronite, Chaldean and Armenian entries.
 - **Three Churches have no single head**, and carry `"see": null`: the Belarusian
   (served under an apostolic visitator), the Russian (no functioning hierarchy since
-  the Soviet period), and the Italo-Albanian (three circumscriptions, none
-  metropolitan over the others).
+  the Soviet period, so its `head_title` is null as well), and the Italo-Albanian
+  (three circumscriptions, none metropolitan over the others).
+- **Cross-checked against the *Dizionario Enciclopedico dell'Oriente Cristiano***
+  (ed. E. G. Farrugia, Pontificio Istituto Orientale, Rome 2000; cited below as
+  *DEOC*). It reflects the Churches as they stood in 2000. Every difference between
+  its classification and this seed's is explained by a later act (the elevations of
+  2005, 2008 and 2015, the erection of the Eritrean Church in 2015), except those
+  raised in open questions 7–9.
 - **`esi:ruthenian` is canonically irregular.** The metropolitan see is Pittsburgh,
   but the Church also comprises the Eparchy of Mukachevo and the Apostolic Exarchate
   of the Czech Republic, both immediately subject to the Holy See rather than to the
@@ -111,3 +117,21 @@ from), `circumscription_count`, and `historical_names`.
    `esi:` ID (`"church_sui_iuris": "esi:latin"`) or keep the bare slug and resolve it
    by convention. The former is explicit and matches how CECDR now carries
    `"type": "ctype:diocese"`; the latter leaves 2,935 entries untouched.
+7. Whether the Italo-Albanian Church is a Church *sui iuris* at all. *DEOC*'s
+   article on the Eastern Catholic Churches (p. 547) says it "non è ancora tale" —
+   is not yet one — because it has no metropolitan. The seed classes it
+   `cstat:other`, as the Annuario does. *DEOC* is not consistent with itself here:
+   its own article on the Church *sui iuris* (pp. 734-735) says that the other
+   Churches *sui iuris* are each governed by a hierarch immediately subject to the
+   Apostolic See, with no metropolitan required. The seed keeps `cstat:other`, but
+   the dissent should be on record.
+8. To which Church the Apostolic Exarchate of the Czech Republic belongs. The seed
+   counts it in `esi:ruthenian`, following Catholic-Hierarchy; *DEOC* describes its
+   erection at Prague in 1996 in its article on the Slovak Greek Catholic Church
+   (p. 714). The Annuario should decide it.
+9. Whether there is a Georgian Byzantine Catholic Church. *DEOC* (p. 547) names
+   Georgia, with Belarus, Albania and Russia, among the places with communities of
+   Eastern Catholics without a hierarchy of their own. The other three are in this
+   seed as Churches *sui iuris*; Georgia is not, and the Annuario lists no such
+   Church. If the Annuario does not recognise one, a note saying so would stop the
+   question being raised again.
