@@ -46,9 +46,22 @@ esi:<slug>
   "canonical_status": "cstat:patriarchal",
   "head_title": "patriarch",
   "see": "Damascus",
+  "title_city": "Antioch",
   "country": "SY"
 }
 ```
+
+`see` and `title_city` follow the CCEO's own distinction between the see and the
+title. A patriarchal Church must have a fixed see for the residence of the patriarch
+in the principal city from which he takes his title, but only "if it is possible"
+(can. 57 §3), so the two can differ: the Melkite patriarch takes his title from
+Antioch and has his see at Damascus. What the common law says of patriarchs applies to
+major archbishops (can. 152): the Romanian major archbishop's title is Făgăraș and
+Alba Iulia, his see Blaj. A metropolitan Church *sui iuris* has no such latitude: its
+see "is to be in the principal city from which the metropolitan … takes his title"
+(can. 158 §1), so for the Hungarian Church both are Hajdúdorog, though the metropolitan
+resides in Debrecen. `title_city` is null for the other Churches *sui iuris*, to which
+neither canon applies.
 
 Neither `tradition` nor `canonical_status` is a free string: both are
 cross-references into companion registries in this repository, following the same
@@ -76,10 +89,9 @@ from), `circumscription_count`, and `historical_names`.
   field in this registry and is not published online. The canonical categories come
   from the CCEO itself; the rest was assembled from Catholic-Hierarchy and GCatholic,
   which the CDCF treats as verification aids and not as authorities.
-- **`see` and `country` are the least verified fields.** Several are the residence of
-  the head rather than the titular see — the Syriac patriarchal see is Antioch while
-  the patriarch resides in Beirut, and the same distinction affects the Melkite,
-  Maronite, Chaldean and Armenian entries.
+- **`see`, `title_city` and `country` are the least verified fields.** The
+  distinction between them is the CCEO's, but the values were assembled from
+  secondary sources and await the Annuario.
 - **Three Churches have no single head**, and carry `"see": null`: the Belarusian
   (served under an apostolic visitator), the Russian (no functioning hierarchy since
   the Soviet period, so its `head_title` is null as well), and the Italo-Albanian

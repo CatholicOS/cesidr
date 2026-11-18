@@ -1,5 +1,5 @@
 {
-  "$comment": "CESIDR seed registry: draft canonical IDs for the 24 Churches sui iuris of the Catholic Church — the Latin Church and the 23 Eastern Catholic Churches. All IDs are drafts pending committee review; the `esi:` prefix is a placeholder pending namespace coordination across the CDCF registries. Slugs are deliberately identical to the values CECDR's `church_sui_iuris` field already uses (latin, ukrainian, maronite, syro-malabar), so that field can become a cross-reference into this registry. VERIFICATION STATUS: `tradition` and `canonical_status` are cross-references into data/tradition.json and data/canonical_status.json respectively. The canonical categories follow the Code of Canons of the Eastern Churches and were checked against Catholic-Hierarchy's rite index and canonical-status surveys. `see`, `country` and `erected` are enrichment and are the least verified fields here. The seed has been cross-checked against the Dizionario Enciclopedico dell'Oriente Cristiano (ed. E. G. Farrugia, Pontificio Istituto Orientale, Rome 2000), which reflects the state of the Churches in 2000 and so cannot confirm later changes. The Annuario Pontificio is the authority for all of it and has NOT been consulted — it is not available online. Treat every field as draft.",
+  "$comment": "CESIDR seed registry: draft canonical IDs for the 24 Churches sui iuris of the Catholic Church — the Latin Church and the 23 Eastern Catholic Churches. All IDs are drafts pending committee review; the `esi:` prefix is a placeholder pending namespace coordination across the CDCF registries. Slugs are deliberately identical to the values CECDR's `church_sui_iuris` field already uses (latin, ukrainian, maronite, syro-malabar), so that field can become a cross-reference into this registry. VERIFICATION STATUS: `tradition` and `canonical_status` are cross-references into data/tradition.json and data/canonical_status.json respectively. The canonical categories follow the Code of Canons of the Eastern Churches and were checked against Catholic-Hierarchy's rite index and canonical-status surveys. `see` and `title_city` follow the CCEO's own distinction: `title_city` is the principal city from which the head takes his title, and `see` is, for a patriarchal or major archiepiscopal Church, the fixed residence of its head (can. 57 §3, applied to major archbishops by can. 152) and, for a metropolitan Church sui iuris, the see in the city of the metropolitan's title (can. 158 §1). `title_city` is null for the other Churches sui iuris, to which neither canon applies. `see`, `title_city`, `country` and `erected` are enrichment and are the least verified fields here. The seed has been cross-checked against the Dizionario Enciclopedico dell'Oriente Cristiano (ed. E. G. Farrugia, Pontificio Istituto Orientale, Rome 2000), which reflects the state of the Churches in 2000 and so cannot confirm later changes. The Annuario Pontificio is the authority for all of it and has NOT been consulted — it is not available online. Treat every field as draft.",
   "id_scheme": "esi:<slug>",
   "entry_count": 24,
   "counts_by_canonical_status": {
@@ -17,6 +17,7 @@
       "canonical_status": "cstat:latin",
       "head_title": "Roman Pontiff",
       "see": "Rome",
+      "title_city": "Rome",
       "country": "VA",
       "note": "The Western Church, comprising the great majority of the faithful. Governed by the 1983 Code of Canon Law rather than the CCEO, and headed by the Roman Pontiff directly; `canonical_status` is therefore its own value rather than one of the four CCEO categories. The title Patriarch of the West, dropped from the Annuario Pontificio in 2006, was restored in 2024."
     },
@@ -27,6 +28,7 @@
       "canonical_status": "cstat:other",
       "head_title": "apostolic administrator",
       "see": "Vlorë",
+      "title_city": null,
       "country": "AL",
       "note": "Governed by the Apostolic Administration of Southern Albania."
     },
@@ -37,6 +39,7 @@
       "canonical_status": "cstat:other",
       "head_title": "apostolic visitator",
       "see": null,
+      "title_city": null,
       "country": "BY",
       "note": "Descends from the Union of Brest (1596). Has no eparchial hierarchy of its own; the faithful are served under an apostolic visitator."
     },
@@ -47,6 +50,7 @@
       "canonical_status": "cstat:other",
       "head_title": "eparchial bishop",
       "see": "Sofia",
+      "title_city": null,
       "country": "BG",
       "note": "Originates in the appointment in 1861 of Joseph Sokolsky as archbishop of the Bulgarian Catholics of the Byzantine rite. Comprises the Eparchy of Saint John XXIII of Sofia, raised from an apostolic exarchate erected in 1926. That exarchate replaced three earlier jurisdictions, all suppressed into it: the apostolic vicariates of Thessalonica (Macedonia) and Adrianople (Thrace), both erected in 1883, and the apostolic administration at Constantinople."
     },
@@ -57,6 +61,7 @@
       "canonical_status": "cstat:other",
       "head_title": "eparchial bishop",
       "see": "Križevci",
+      "title_city": null,
       "country": "HR",
       "note": "Comprises the Eparchy of Križevci (erected 1777, covering Croatia, Slovenia and Bosnia and Herzegovina) and the Eparchy of Saint Nicholas of Ruski Krstur (Serbia, raised from an apostolic exarchate on 6 December 2018). Naming is unsettled: also styled the Croatian Greek Catholic Church, and indexed by Catholic-Hierarchy simply as Križevci."
     },
@@ -67,6 +72,7 @@
       "canonical_status": "cstat:other",
       "head_title": "apostolic exarch",
       "see": "Athens",
+      "title_city": null,
       "country": "GR",
       "note": "Comprises the Apostolic Exarchate of Greece and the Apostolic Exarchate of Istanbul; a very small body."
     },
@@ -76,9 +82,10 @@
       "tradition": "trad:byzantine",
       "canonical_status": "cstat:metropolitan",
       "head_title": "metropolitan",
-      "see": "Debrecen",
+      "see": "Hajdúdorog",
+      "title_city": "Hajdúdorog",
       "country": "HU",
-      "note": "Raised to a metropolitan Church sui iuris in 2015, the Metropolia of Hajdúdorog."
+      "note": "Raised to a metropolitan Church sui iuris in 2015, the Metropolia of Hajdúdorog. Under CCEO can. 158 §1 the see of a metropolitan Church sui iuris is in the city from which the metropolitan takes his title, so the see is Hajdúdorog; the metropolitan resides in Debrecen."
     },
     {
       "id": "esi:italo-albanian",
@@ -87,6 +94,7 @@
       "canonical_status": "cstat:other",
       "head_title": "eparchial bishop",
       "see": null,
+      "title_city": null,
       "country": "IT",
       "note": "Never formally out of communion with Rome. Has three circumscriptions and no single head: the Eparchies of Lungro and of Piana degli Albanesi, and the Exarchic Monastery of Santa Maria di Grottaferrata, exarchic since 1937 and immediately subject to the Congregation for the Oriental Churches."
     },
@@ -97,6 +105,7 @@
       "canonical_status": "cstat:other",
       "head_title": "eparchial bishop",
       "see": "Strumica",
+      "title_city": null,
       "country": "MK",
       "note": "Comprises the Eparchy of the Assumption of the Blessed Virgin Mary in Strumica-Skopje, raised from an apostolic exarchate."
     },
@@ -107,6 +116,7 @@
       "canonical_status": "cstat:patriarchal",
       "head_title": "patriarch",
       "see": "Damascus",
+      "title_city": "Antioch",
       "country": "SY",
       "note": "Patriarchate of Antioch and all the East, of Alexandria and of Jerusalem. The largest Byzantine-tradition Catholic body in the Middle East."
     },
@@ -117,8 +127,9 @@
       "canonical_status": "cstat:major-archiepiscopal",
       "head_title": "major archbishop",
       "see": "Blaj",
+      "title_city": "Făgăraș and Alba Iulia",
       "country": "RO",
-      "note": "Major Archiepiscopal Church of Făgăraș and Alba Iulia. Suppressed under the communist regime in 1948 and restored in 1990."
+      "note": "Major Archiepiscopal Church of Făgăraș and Alba Iulia, the title the major archbishop bears; Blaj has been the residence of its heads since 1737 and is the see in the sense of CCEO can. 57 §3 (applied by can. 152). Suppressed under the communist regime in 1948 and restored in 1990."
     },
     {
       "id": "esi:russian",
@@ -127,6 +138,7 @@
       "canonical_status": "cstat:other",
       "head_title": null,
       "see": null,
+      "title_city": null,
       "country": "RU",
       "note": "Has no functioning hierarchy and so no head: its Apostolic Exarchates of Russia (1917) and Harbin (1928) have had no exarch since the Soviet period, and communities are dispersed."
     },
@@ -137,6 +149,7 @@
       "canonical_status": "cstat:metropolitan",
       "head_title": "metropolitan",
       "see": "Pittsburgh",
+      "title_city": "Pittsburgh",
       "country": "US",
       "note": "Also styled the Byzantine Catholic Church in America. Canonically unusual: the metropolitan see is the Metropolia of Pittsburgh, but the Church also includes the Eparchy of Mukachevo (Ukraine) and the Apostolic Exarchate of the Czech Republic, both immediately subject to the Holy See rather than to Pittsburgh."
     },
@@ -147,6 +160,7 @@
       "canonical_status": "cstat:metropolitan",
       "head_title": "metropolitan",
       "see": "Prešov",
+      "title_city": "Prešov",
       "country": "SK",
       "note": "Raised to a metropolitan Church sui iuris in 2008."
     },
@@ -157,6 +171,7 @@
       "canonical_status": "cstat:major-archiepiscopal",
       "head_title": "major archbishop",
       "see": "Kyiv",
+      "title_city": "Kyiv-Halyč",
       "country": "UA",
       "note": "Major Archiepiscopal Church of Kyiv-Halyč; the see was transferred from Lviv to Kyiv in 2005. In 2000 the largest of the Eastern Catholic Churches, with a little over 5,000,000 faithful against about 3,300,000 Syro-Malabar (Dizionario Enciclopedico dell'Oriente Cristiano, Rome 2000, pp. 122, 701, 786); the present ranking awaits a dated Annuario figure — see open question 5 in docs/schema-proposal.md."
     },
@@ -167,6 +182,7 @@
       "canonical_status": "cstat:patriarchal",
       "head_title": "patriarch",
       "see": "Cairo",
+      "title_city": "Alexandria",
       "country": "EG",
       "note": "Patriarchate of Alexandria of the Copts, erected 1824 and restored 1895."
     },
@@ -177,6 +193,7 @@
       "canonical_status": "cstat:metropolitan",
       "head_title": "metropolitan",
       "see": "Asmara",
+      "title_city": "Asmara",
       "country": "ER",
       "note": "Erected as a metropolitan Church sui iuris on 19 January 2015, separating from the Ethiopian Catholic Church. The most recently erected Church sui iuris."
     },
@@ -187,6 +204,7 @@
       "canonical_status": "cstat:metropolitan",
       "head_title": "metropolitan",
       "see": "Addis Ababa",
+      "title_city": "Addis Ababa",
       "country": "ET",
       "note": "Uses the Ge'ez liturgical tradition."
     },
@@ -197,6 +215,7 @@
       "canonical_status": "cstat:patriarchal",
       "head_title": "patriarch",
       "see": "Bkerké",
+      "title_city": "Antioch",
       "country": "LB",
       "note": "Patriarchate of Antioch of the Maronites. The only Eastern Catholic Church with no counterpart outside communion with Rome."
     },
@@ -207,8 +226,9 @@
       "canonical_status": "cstat:patriarchal",
       "head_title": "patriarch",
       "see": "Beirut",
+      "title_city": "Antioch",
       "country": "LB",
-      "note": "Patriarchate of Antioch of the Syriacs. The patriarchal see is Antioch; the patriarch resides in Beirut."
+      "note": "Patriarchate of Antioch of the Syriacs. The patriarch takes his title from Antioch; his see, the fixed residence of CCEO can. 57 §3, is Beirut."
     },
     {
       "id": "esi:syro-malankara",
@@ -217,6 +237,7 @@
       "canonical_status": "cstat:major-archiepiscopal",
       "head_title": "major archbishop",
       "see": "Trivandrum",
+      "title_city": "Trivandrum",
       "country": "IN",
       "note": "Entered full communion in 1930 through the Reunion Movement led by Mar Ivanios. Raised to a major archiepiscopal Church in 2005."
     },
@@ -227,6 +248,7 @@
       "canonical_status": "cstat:patriarchal",
       "head_title": "patriarch",
       "see": "Baghdad",
+      "title_city": "Babylon",
       "country": "IQ",
       "note": "Patriarchate of Babylon of the Chaldeans."
     },
@@ -237,6 +259,7 @@
       "canonical_status": "cstat:major-archiepiscopal",
       "head_title": "major archbishop",
       "see": "Ernakulam-Angamaly",
+      "title_city": "Ernakulam-Angamaly",
       "country": "IN",
       "note": "Traces its origin to the mission of the Apostle Thomas. Raised to a major archiepiscopal Church in 1992."
     },
@@ -247,6 +270,7 @@
       "canonical_status": "cstat:patriarchal",
       "head_title": "patriarch",
       "see": "Beirut",
+      "title_city": "Cilicia",
       "country": "LB",
       "note": "Patriarchate of Cilicia of the Armenians. The Armenian is the only liturgical tradition represented by a single Church sui iuris."
     }

@@ -11,7 +11,7 @@
       "cceo_category": true,
       "head_title": "patriarch",
       "governing_body": "synod of bishops of the patriarchal Church",
-      "note": "The fullest developed form of an Eastern Catholic Church. The patriarch together with the synod holds legislative, judicial and administrative power within the territory of the Church, saving those matters reserved to the Roman Pontiff."
+      "note": "The fullest developed form of an Eastern Catholic Church. The synod of bishops of the patriarchal Church is alone competent to make laws for the whole Church (can. 110 §1) and is its tribunal (§2); administrative acts belong to the patriarch, not the synod, unless the patriarch determines otherwise or common law reserves them to the synod (§4). The patriarch's power is validly exercised only within the territory of the patriarchal Church, unless the nature of the matter or law approved by the Roman Pontiff establishes otherwise (can. 78 §2). Patriarchs precede all bishops of any degree everywhere in the world, with due regard for special norms of precedence established by the Roman Pontiff (can. 58)."
     },
     {
       "id": "cstat:major-archiepiscopal",
@@ -21,7 +21,7 @@
       "cceo_category": true,
       "head_title": "major archbishop",
       "governing_body": "synod of bishops of the major archiepiscopal Church",
-      "note": "Governed by a major archbishop with his synod. Can. 152 assimilates it to a patriarchal Church in law, the principal difference being that the election of the major archbishop requires confirmation by the Roman Pontiff."
+      "note": "Governed by a major archbishop with his synod. Can. 152 assimilates it to a patriarchal Church in law, unless the common law expressly provides otherwise or it is evident from the nature of the matter. Two differences follow: the elected major archbishop must petition the Roman Pontiff for confirmation of his election (can. 153 §2), where a patriarchal election is only notified to him (can. 76 §1); and the worldwide precedence of patriarchs over all bishops (can. 58) does not extend to major archbishops, who instead take precedence of honour immediately after the patriarchs, in the order in which their Churches were erected as major archiepiscopal (can. 154)."
     },
     {
       "id": "cstat:metropolitan",
@@ -41,7 +41,7 @@
       "cceo_category": true,
       "head_title": "hierarch",
       "governing_body": null,
-      "note": "The residual category, which the CCEO does not give a positive name — it is literally 'the other Churches sui iuris'. Each is entrusted to a hierarch designated by the Holy See. The eight Churches in this category vary widely: some have an eparchy, some an apostolic exarchate or administration, and some no hierarchy of their own at all."
+      "note": "The residual category, which the CCEO does not give a positive name — it is literally 'the other Churches sui iuris'. Each is entrusted to a hierarch who presides over it according to common law and the particular law established by the Roman Pontiff (can. 174); these Churches depend immediately on the Apostolic See, as whose delegate the hierarch exercises the rights and obligations of can. 159 nn. 3-8 (can. 175). The eight Churches in this category vary widely: some have an eparchy, some an apostolic exarchate or administration, and some no hierarchy of their own at all."
     },
     {
       "id": "cstat:latin",
