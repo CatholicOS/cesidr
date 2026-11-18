@@ -93,8 +93,9 @@ from), `circumscription_count`, and `historical_names`.
   distinction between them is the CCEO's, but the values were assembled from
   secondary sources and await the Annuario.
 - **Three Churches have no single head**, and carry `"see": null`: the Belarusian
-  (served under an apostolic visitator), the Russian (no functioning hierarchy since
-  the Soviet period, so its `head_title` is null as well), and the Italo-Albanian
+  (served under an apostolic visitator), the Russian (no exarch since the Soviet period,
+  the Latin bishop at Novosibirsk being only the ordinary for its faithful in Russia,
+  so its `head_title` is null as well), and the Italo-Albanian
   (three circumscriptions, none metropolitan over the others).
 - **Cross-checked against the *Dizionario Enciclopedico dell'Oriente Cristiano***
   (ed. E. G. Farrugia, Pontificio Istituto Orientale, Rome 2000; cited below as

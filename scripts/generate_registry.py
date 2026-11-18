@@ -34,7 +34,7 @@ into [`data/canonical_status.json`](../data/canonical_status.json) — patriarch
 the 1983 Code instead and takes none of them. The tradition headings are likewise
 `trad:` cross-references into [`data/tradition.json`](../data/tradition.json).
 **Head** is the title of the one who governs the Church, blank for the Russian Church,
-which has no functioning hierarchy. **Title** is the city from which the head takes his
+which has no hierarch of its own. **Title** is the city from which the head takes his
 title, and **See** is the seat of governance in the CCEO's sense: for a patriarchal or
 major archiepiscopal Church the fixed residence of its head (can. 57 §3, applied by
 can. 152), which need not be the city of the title; for a metropolitan Church *sui
