@@ -59,8 +59,10 @@ Antioch and has his see at Damascus. What the common law says of patriarchs appl
 major archbishops (can. 152): the Romanian major archbishop's title is Făgăraș and
 Alba Iulia, his see Blaj. A metropolitan Church *sui iuris* has no such latitude: its
 see "is to be in the principal city from which the metropolitan … takes his title"
-(can. 158 §1), so for the Hungarian Church both are Hajdúdorog, though the metropolitan
-resides in Debrecen. `title_city` is null for the other Churches *sui iuris*, to which
+(can. 158 §1), unless the act erecting the Church provides otherwise. The Hungarian
+Church's does: its metropolitan takes his title from Hajdúdorog, but the apostolic
+constitution of 19 March 2015 erected it "cum sede principe in urbe Debrecensi", so its
+see is Debrecen. `title_city` is null for the other Churches *sui iuris*, to which
 neither canon applies.
 
 Neither `tradition` nor `canonical_status` is a free string: both are

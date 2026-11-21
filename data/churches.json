@@ -1,5 +1,5 @@
 {
-  "$comment": "CESIDR seed registry: draft canonical IDs for the 24 Churches sui iuris of the Catholic Church — the Latin Church and the 23 Eastern Catholic Churches. All IDs are drafts pending committee review; the `esi:` prefix is a placeholder pending namespace coordination across the CDCF registries. Slugs are deliberately identical to the values CECDR's `church_sui_iuris` field already uses (latin, ukrainian, maronite, syro-malabar), so that field can become a cross-reference into this registry. VERIFICATION STATUS: `tradition` and `canonical_status` are cross-references into data/tradition.json and data/canonical_status.json respectively. The canonical categories follow the Code of Canons of the Eastern Churches and were checked against Catholic-Hierarchy's rite index and canonical-status surveys. `see` and `title_city` follow the CCEO's own distinction: `title_city` is the principal city from which the head takes his title, and `see` is, for a patriarchal or major archiepiscopal Church, the fixed residence of its head (can. 57 §3, applied to major archbishops by can. 152) and, for a metropolitan Church sui iuris, the see in the city of the metropolitan's title (can. 158 §1). `title_city` is null for the other Churches sui iuris, to which neither canon applies. `see`, `title_city`, `country` and `erected` are enrichment and are the least verified fields here. The seed has been cross-checked against the Dizionario Enciclopedico dell'Oriente Cristiano (ed. E. G. Farrugia, Pontificio Istituto Orientale, Rome 2000), which reflects the state of the Churches in 2000 and so cannot confirm later changes. The Annuario Pontificio is the authority for all of it and has NOT been consulted — it is not available online. Treat every field as draft.",
+  "$comment": "CESIDR seed registry: draft canonical IDs for the 24 Churches sui iuris of the Catholic Church — the Latin Church and the 23 Eastern Catholic Churches. All IDs are drafts pending committee review; the `esi:` prefix is a placeholder pending namespace coordination across the CDCF registries. Slugs are deliberately identical to the values CECDR's `church_sui_iuris` field already uses (latin, ukrainian, maronite, syro-malabar), so that field can become a cross-reference into this registry. VERIFICATION STATUS: `tradition` and `canonical_status` are cross-references into data/tradition.json and data/canonical_status.json respectively. The canonical categories follow the Code of Canons of the Eastern Churches and were checked against Catholic-Hierarchy's rite index and canonical-status surveys. `see` and `title_city` follow the CCEO's own distinction: `title_city` is the principal city from which the head takes his title, and `see` is, for a patriarchal or major archiepiscopal Church, the fixed residence of its head (can. 57 §3, applied to major archbishops by can. 152) and, for a metropolitan Church sui iuris, the see in the city of the metropolitan's title (can. 158 §1) unless the act that erected the Church provides otherwise, as it does for the Hungarian Church. `country` is the ISO 3166-1 alpha-2 code of the see or, for a Church with no see, of the country where its faithful are. `title_city` is null for the other Churches sui iuris, to which neither canon applies. `see`, `title_city`, `country` and `erected` are enrichment and are the least verified fields here. The seed has been cross-checked against the Dizionario Enciclopedico dell'Oriente Cristiano (ed. E. G. Farrugia, Pontificio Istituto Orientale, Rome 2000), which reflects the state of the Churches in 2000 and so cannot confirm later changes. The Annuario Pontificio is the authority for all of it and has NOT been consulted — it is not available online. Treat every field as draft.",
   "id_scheme": "esi:<slug>",
   "entry_count": 24,
   "counts_by_canonical_status": {
@@ -82,17 +82,17 @@
       "tradition": "trad:byzantine",
       "canonical_status": "cstat:metropolitan",
       "head_title": "metropolitan",
-      "see": "Hajdúdorog",
+      "see": "Debrecen",
       "title_city": "Hajdúdorog",
       "country": "HU",
-      "note": "Raised to a metropolitan Church sui iuris in 2015, the Metropolia of Hajdúdorog. Under CCEO can. 158 §1 the see of a metropolitan Church sui iuris is in the city from which the metropolitan takes his title, so the see is Hajdúdorog; the metropolitan resides in Debrecen."
+      "note": "Raised to a metropolitan Church sui iuris in 2015, the Metropolia of Hajdúdorog. CCEO can. 158 §1 places the see of a metropolitan Church sui iuris in the city from which the metropolitan takes his title, but the apostolic constitution of 19 March 2015 that erected it set its principal see at Debrecen (\"cum sede principe in urbe Debrecensi\"), so the title is Hajdúdorog and the see Debrecen."
     },
     {
       "id": "esi:italo-albanian",
       "name_en": "Italo-Albanian Catholic Church",
       "tradition": "trad:byzantine",
       "canonical_status": "cstat:other",
-      "head_title": "eparchial bishop",
+      "head_title": null,
       "see": null,
       "title_city": null,
       "country": "IT",
@@ -248,9 +248,9 @@
       "canonical_status": "cstat:patriarchal",
       "head_title": "patriarch",
       "see": "Baghdad",
-      "title_city": "Babylon",
+      "title_city": "Baghdad",
       "country": "IQ",
-      "note": "Patriarchate of Babylon of the Chaldeans."
+      "note": "Patriarchate of Baghdad of the Chaldeans since 19 February 2022, when the Holy See approved the Synod's request to change the title from Patriarchate of Babylon of the Chaldeans."
     },
     {
       "id": "esi:syro-malabar",

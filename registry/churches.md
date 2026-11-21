@@ -10,13 +10,15 @@ into [`data/canonical_status.json`](../data/canonical_status.json) — patriarch
 the 1983 Code instead and takes none of them. The tradition headings are likewise
 `trad:` cross-references into [`data/tradition.json`](../data/tradition.json).
 **Head** is the title of the one who governs the Church, blank for the Russian Church,
-which has no hierarch of its own. **Title** is the city from which the head takes his
+which has no hierarch of its own, and for the Italo-Albanian, which has no single head. **Title** is the city from which the head takes his
 title, and **See** is the seat of governance in the CCEO's sense: for a patriarchal or
 major archiepiscopal Church the fixed residence of its head (can. 57 §3, applied by
 can. 152), which need not be the city of the title; for a metropolitan Church *sui
-iuris* the see in the city of the title (can. 158 §1). Title is blank for the other
+iuris* the see in the city of the title (can. 158 §1), unless the act erecting the
+Church provides otherwise, as the Hungarian Church's does. Title is blank for the other
 Churches *sui iuris*, to which neither canon applies, and See is blank for the Churches
-that have no single head. `Country` is the ISO 3166-1 alpha-2 code of the see. Circumscriptions of these Churches are identified in the
+that have no single head. **Country** is the ISO 3166-1 alpha-2 code of the see or, for a
+Church with no see, of the country where its faithful are. Circumscriptions of these Churches are identified in the
 [CECDR](../../cecdr) with `circ:` IDs, whose `church_sui_iuris` field is a
 cross-reference into this registry.
 
@@ -67,7 +69,7 @@ consulted; `see`, `title_city`, `country` and the notes are the least verified.
 
 | ID | Church | Status | Head | Title | See | Country | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `esi:chaldean` | Chaldean Catholic Church | patriarchal Church | patriarch | Babylon | Baghdad | IQ | Patriarchate of Babylon of the Chaldeans. |
+| `esi:chaldean` | Chaldean Catholic Church | patriarchal Church | patriarch | Baghdad | Baghdad | IQ | Patriarchate of Baghdad of the Chaldeans since 19 February 2022, when the Holy See approved the Synod's request to change the title from Patriarchate of Babylon of the Chaldeans. |
 | `esi:syro-malabar` | Syro-Malabar Catholic Church | major archiepiscopal Church | major archbishop | Ernakulam-Angamaly | Ernakulam-Angamaly | IN | Traces its origin to the mission of the Apostle Thomas. Raised to a major archiepiscopal Church in 1992. |
 
 ## Byzantine Tradition
@@ -81,8 +83,8 @@ consulted; `see`, `title_city`, `country` and the notes are the least verified.
 | `esi:bulgarian` | Bulgarian Greek Catholic Church | other Church sui iuris | eparchial bishop |  | Sofia | BG | Originates in the appointment in 1861 of Joseph Sokolsky as archbishop of the Bulgarian Catholics of the Byzantine rite. Comprises the Eparchy of Saint John XXIII of Sofia, raised from an apostolic exarchate erected in 1926. That exarchate replaced three earlier jurisdictions, all suppressed into it: the apostolic vicariates of Thessalonica (Macedonia) and Adrianople (Thrace), both erected in 1883, and the apostolic administration at Constantinople. |
 | `esi:croatian-serbian` | Greek Catholic Church of Croatia and Serbia | other Church sui iuris | eparchial bishop |  | Križevci | HR | Comprises the Eparchy of Križevci (erected 1777, covering Croatia, Slovenia and Bosnia and Herzegovina) and the Eparchy of Saint Nicholas of Ruski Krstur (Serbia, raised from an apostolic exarchate on 6 December 2018). Naming is unsettled: also styled the Croatian Greek Catholic Church, and indexed by Catholic-Hierarchy simply as Križevci. |
 | `esi:greek` | Greek Byzantine Catholic Church | other Church sui iuris | apostolic exarch |  | Athens | GR | Comprises the Apostolic Exarchate of Greece and the Apostolic Exarchate of Istanbul; a very small body. |
-| `esi:hungarian` | Hungarian Greek Catholic Church | metropolitan Church sui iuris | metropolitan | Hajdúdorog | Hajdúdorog | HU | Raised to a metropolitan Church sui iuris in 2015, the Metropolia of Hajdúdorog. Under CCEO can. 158 §1 the see of a metropolitan Church sui iuris is in the city from which the metropolitan takes his title, so the see is Hajdúdorog; the metropolitan resides in Debrecen. |
-| `esi:italo-albanian` | Italo-Albanian Catholic Church | other Church sui iuris | eparchial bishop |  |  | IT | Never formally out of communion with Rome. Has three circumscriptions and no single head: the Eparchies of Lungro and of Piana degli Albanesi, and the Exarchic Monastery of Santa Maria di Grottaferrata, exarchic since 1937 and immediately subject to the Congregation for the Oriental Churches. |
+| `esi:hungarian` | Hungarian Greek Catholic Church | metropolitan Church sui iuris | metropolitan | Hajdúdorog | Debrecen | HU | Raised to a metropolitan Church sui iuris in 2015, the Metropolia of Hajdúdorog. CCEO can. 158 §1 places the see of a metropolitan Church sui iuris in the city from which the metropolitan takes his title, but the apostolic constitution of 19 March 2015 that erected it set its principal see at Debrecen ("cum sede principe in urbe Debrecensi"), so the title is Hajdúdorog and the see Debrecen. |
+| `esi:italo-albanian` | Italo-Albanian Catholic Church | other Church sui iuris |  |  |  | IT | Never formally out of communion with Rome. Has three circumscriptions and no single head: the Eparchies of Lungro and of Piana degli Albanesi, and the Exarchic Monastery of Santa Maria di Grottaferrata, exarchic since 1937 and immediately subject to the Congregation for the Oriental Churches. |
 | `esi:macedonian` | Macedonian Greek Catholic Church | other Church sui iuris | eparchial bishop |  | Strumica | MK | Comprises the Eparchy of the Assumption of the Blessed Virgin Mary in Strumica-Skopje, raised from an apostolic exarchate. |
 | `esi:melkite` | Melkite Greek Catholic Church | patriarchal Church | patriarch | Antioch | Damascus | SY | Patriarchate of Antioch and all the East, of Alexandria and of Jerusalem. The largest Byzantine-tradition Catholic body in the Middle East. |
 | `esi:romanian` | Romanian Greek Catholic Church | major archiepiscopal Church | major archbishop | Făgăraș and Alba Iulia | Blaj | RO | Major Archiepiscopal Church of Făgăraș and Alba Iulia, the title the major archbishop bears; Blaj has been the residence of its heads since 1737 and is the see in the sense of CCEO can. 57 §3 (applied by can. 152). Suppressed under the communist regime in 1948 and restored in 1990. |
