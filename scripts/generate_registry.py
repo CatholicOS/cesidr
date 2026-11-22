@@ -52,54 +52,107 @@ consulted; `see`, `title_city`, `country` and the notes are the least verified.
 """
 
 
-def main():
-    repo_root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
-    def load(name):
-        return json.load(open(repo_root / "data" / name, encoding="utf-8"))
+def load(repo_root, name):
+    return json.loads((repo_root / "data" / name).read_text(encoding="utf-8"))
 
-    data = load("churches.json")
+
+def validate(data, traditions, statuses):
+    """Raise ValueError describing every problem found in the seed.
+
+    Deliberately not `assert`: Python strips assertions under -O, and when
+    these guards were assertions an unresolvable `tradition` made the church
+    vanish from the table while the run exited 0. Every problem is collected
+    so that repairing the seed does not take one run per error.
+    """
     entries = data["entries"]
-    traditions = {t["id"]: t for t in load("tradition.json")["entries"]}
-    statuses = {s["id"]: s for s in load("canonical_status.json")["entries"]}
+    problems = []
 
     ids = [e["id"] for e in entries]
-    assert len(ids) == len(set(ids)), "duplicate ids"
-    assert len(entries) == data["entry_count"], "entry_count out of step with entries"
+    dupes = sorted({i for i in ids if ids.count(i) > 1})
+    if dupes:
+        problems.append(f"duplicate ids: {dupes}")
+
+    if data.get("entry_count") != len(entries):
+        problems.append(f"entry_count is {data.get('entry_count')!r} "
+                        f"but there are {len(entries)} entries")
+
     # `tradition` and `canonical_status` are cross-references; an unresolvable
     # one would silently produce a broken registry table.
-    unknown = {e["tradition"] for e in entries} - set(traditions)
-    assert not unknown, f"unknown traditions: {sorted(unknown)}"
-    unknown = {e["canonical_status"] for e in entries} - set(statuses)
-    assert not unknown, f"unknown canonical statuses: {sorted(unknown)}"
-    assert set(TRADITION_ORDER) == set(traditions), "TRADITION_ORDER out of step with tradition.json"
+    unknown = sorted({e["tradition"] for e in entries} - set(traditions))
+    if unknown:
+        problems.append(f"unknown traditions: {unknown}")
+    unknown = sorted({e["canonical_status"] for e in entries} - set(statuses))
+    if unknown:
+        problems.append(f"unknown canonical statuses: {unknown}")
 
-    eastern = sum(1 for e in entries if e["tradition"] != "trad:latin")
-    out = [HEADER.format(count=len(entries), eastern=eastern)]
+    # A tradition missing from TRADITION_ORDER would drop every church in it.
+    missing = sorted(set(traditions) - set(TRADITION_ORDER))
+    if missing:
+        problems.append(f"traditions missing from TRADITION_ORDER: {missing}")
+    extra = sorted(set(TRADITION_ORDER) - set(traditions))
+    if extra:
+        problems.append(f"TRADITION_ORDER names traditions not in tradition.json: {extra}")
 
+    if problems:
+        raise ValueError("; ".join(problems))
+
+
+def render(data, traditions, statuses):
+    """Return the registry table as Markdown.
+
+    The counts in the header are taken from the rows actually rendered, so
+    the header cannot claim more churches than the table holds; a church that
+    was not reached is an error, not a silent omission.
+    """
+    entries = data["entries"]
+    sections = []
+    rendered = []
     for key in TRADITION_ORDER:
         rows = [e for e in entries if e["tradition"] == key]
         if not rows:
             continue
+        rendered.extend(rows)
         t = traditions[key]
-        out.append(f"\n## {t['name_en'].replace(' tradition', ' Tradition')}\n")
-        out.append(f"`{t['id']}` · *{t['name_la']}*"
-                   + (f" · {t['cceo_reference']}" if t["cceo_reference"] else "")
-                   + f" — {len(rows)} " + ("Church" if len(rows) == 1 else "Churches") + "\n")
-        out.append("| ID | Church | Status | Head | Title | See | Country | Notes |")
-        out.append("| --- | --- | --- | --- | --- | --- | --- | --- |")
+        sections.append(f"\n## {t['name_en'].replace(' tradition', ' Tradition')}\n")
+        sections.append(f"`{t['id']}` · *{t['name_la']}*"
+                        + (f" · {t['cceo_reference']}" if t["cceo_reference"] else "")
+                        + f" — {len(rows)} " + ("Church" if len(rows) == 1 else "Churches") + "\n")
+        sections.append("| ID | Church | Status | Head | Title | See | Country | Notes |")
+        sections.append("| --- | --- | --- | --- | --- | --- | --- | --- |")
         for e in rows:
             s = statuses[e["canonical_status"]]
             label = s["name_en"] if s["cceo_category"] else "—"
-            out.append(
+            sections.append(
                 f"| `{e['id']}` | {e['name_en']} | {label} "
                 f"| {e['head_title'] or ''} | {e['title_city'] or ''} | {e['see'] or ''} | {e['country'] or ''} "
                 f"| {e.get('note', '')} |"
             )
 
+    unrendered = sorted({e["id"] for e in entries} - {e["id"] for e in rendered})
+    if unrendered or len(rendered) != len(entries):
+        raise ValueError(f"churches not rendered: {unrendered}")
+
+    eastern = sum(1 for e in rendered if e["tradition"] != "trad:latin")
+    return "\n".join([HEADER.format(count=len(rendered), eastern=eastern)] + sections) + "\n"
+
+
+def main():
+    repo_root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
+    data = load(repo_root, "churches.json")
+    traditions = {t["id"]: t for t in load(repo_root, "tradition.json")["entries"]}
+    statuses = {s["id"]: s for s in load(repo_root, "canonical_status.json")["entries"]}
+
+    try:
+        validate(data, traditions, statuses)
+        text = render(data, traditions, statuses)
+    except ValueError as exc:
+        sys.exit(f"generate_registry.py: {exc}")
+
     path = repo_root / "registry" / "churches.md"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(out) + "\n", encoding="utf-8")
-    print(f"Wrote {len(entries)} churches to {path}")
+    path.write_text(text, encoding="utf-8")
+    # render() has already refused to return unless every entry was rendered.
+    print(f"Wrote {len(data['entries'])} churches to {path}")
 
 
 if __name__ == "__main__":

@@ -31,7 +31,8 @@ Examples: `esi:latin`, `esi:ukrainian`, `esi:maronite`, `esi:syro-malabar`, `esi
 - [`data/canonical_status.json`](data/canonical_status.json) — the CCEO categories (`cstat:patriarchal`, `cstat:major-archiepiscopal`, …), each with its Latin name, governing canons, the title of its head and its governing body. Each Church's `canonical_status` field is a cross-reference into this file.
 - [`registry/churches.md`](registry/churches.md) — the human-readable table, grouped by liturgical tradition. Generated, never hand-edited.
 - [`docs/schema-proposal.md`](docs/schema-proposal.md) — the proposed schema and the open questions for the committee.
-- [`scripts/generate_registry.py`](scripts/generate_registry.py) — regenerates the registry table from the seed.
+- [`scripts/generate_registry.py`](scripts/generate_registry.py) — regenerates the registry table from the seed, validating every identifier and cross-reference before writing.
+- [`scripts/test_generate_registry.py`](scripts/test_generate_registry.py) — unit tests: `python3 -m unittest discover -s scripts -v`.
 
 ## Canonical status
 
