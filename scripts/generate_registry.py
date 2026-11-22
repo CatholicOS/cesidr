@@ -33,16 +33,22 @@ into [`data/canonical_status.json`](../data/canonical_status.json) — patriarch
 (can. 155-173), and other *sui iuris* (can. 174-176); the Latin Church is governed by
 the 1983 Code instead and takes none of them. The tradition headings are likewise
 `trad:` cross-references into [`data/tradition.json`](../data/tradition.json).
-**Head** is
-the title of the one who governs the Church; **See** is the seat of that governance,
-blank for the Churches that have no single head. `Country` is the ISO 3166-1 alpha-2
-code of the see. Circumscriptions of these Churches are identified in the
+**Head** is the title of the one who governs the Church, blank for the Russian Church,
+which has no hierarch of its own, and for the Italo-Albanian, which has no single head. **Title** is the city from which the head takes his
+title, and **See** is the seat of governance in the CCEO's sense: for a patriarchal or
+major archiepiscopal Church the fixed residence of its head (can. 57 §3, applied by
+can. 152), which need not be the city of the title; for a metropolitan Church *sui
+iuris* the see in the city of the title (can. 158 §1), unless the act erecting the
+Church provides otherwise, as the Hungarian Church's does. Title is blank for the other
+Churches *sui iuris*, to which neither canon applies, and See is blank for the Churches
+that have no single head. **Country** is the ISO 3166-1 alpha-2 code of the see or, for a
+Church with no see, of the country where its faithful are. Circumscriptions of these Churches are identified in the
 [CECDR](../../cecdr) with `circ:` IDs, whose `church_sui_iuris` field is a
 cross-reference into this registry.
 
 All IDs are drafts pending CETF review ([schema proposal](../docs/schema-proposal.md)).
 The Annuario Pontificio is the authority for every field here and has not been
-consulted; `see`, `country` and the notes are the least verified.
+consulted; `see`, `title_city`, `country` and the notes are the least verified.
 """
 
 
@@ -79,14 +85,14 @@ def main():
         out.append(f"`{t['id']}` · *{t['name_la']}*"
                    + (f" · {t['cceo_reference']}" if t["cceo_reference"] else "")
                    + f" — {len(rows)} " + ("Church" if len(rows) == 1 else "Churches") + "\n")
-        out.append("| ID | Church | Status | Head | See | Country | Notes |")
-        out.append("| --- | --- | --- | --- | --- | --- | --- |")
+        out.append("| ID | Church | Status | Head | Title | See | Country | Notes |")
+        out.append("| --- | --- | --- | --- | --- | --- | --- | --- |")
         for e in rows:
             s = statuses[e["canonical_status"]]
             label = s["name_en"] if s["cceo_category"] else "—"
             out.append(
                 f"| `{e['id']}` | {e['name_en']} | {label} "
-                f"| {e['head_title']} | {e['see'] or ''} | {e['country'] or ''} "
+                f"| {e['head_title'] or ''} | {e['title_city'] or ''} | {e['see'] or ''} | {e['country'] or ''} "
                 f"| {e.get('note', '')} |"
             )
 
